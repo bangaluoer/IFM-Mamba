@@ -49,7 +49,31 @@ Please organize the downloaded weights and datasets as follows before running th
 ├── test.py                       # Main inference script
 ├── requirements.txt
 └── README.md
-
-##🚀 Quick Start (Inference)
-1. Download Pre-trained Weights
+```
+## 🚀 Quick Start (Inference)
+## 1. Download Pre-trained Weights
 Download the pre-trained model for noise level σ=15 from the link below and place it in the ./checkpoints/ directory.
+
+  Link: [Google Drive](https://drive.google.com/drive/folders/15_aAldDMwLL0GEX8K1RTFwSPyP35RD4N?usp=drive_link)
+
+## 2. Run Evaluation
+To evaluate the model on the Urban100 dataset (σ=15),simply run the following command:
+```bash
+python test.py --dataset_dir ./datasets/Urban100 --noise_level 15 --weights ./checkpoints/best_model_sigma15.pth
+```
+The denoised images will be saved in the ./results/ folder. You can then evaluate the PSNR/SSIM using your preferred metrics calculation script.
+
+## 🛡️ Note on Reproducibility
+The quantitative results (PSNR/SSIM) reported in the paper were evaluated on a single NVIDIA RTX 3090 GPU with PyTorch 2.0.1 and CUDA 11.7. Due to non-deterministic behaviors in PyTorch's floating-point operations across different GPU architectures and varying cuDNN versions, you may observe minor numerical fluctuations (typically within ±0.05dB in PSNR) when running the inference code on your local machine. This is a normal phenomenon in deep learning and does not affect the overall performance conclusion or structural superiority. We have fixed all random seeds in test.py to minimize such variations.
+
+## 📝 Citation
+If you find this work useful, please consider citing:
+```bibetex
+@article{ji2026isotropic,
+  title={Isotropic Frequency-Modulated Mamba for High-Fidelity Structure-Preserving Image Denoising},
+  author={Ji, Mintao and Zhou, Ying and Yuan, Mingsi and Hu, Xiaopeng and Wang, Fan},
+  journal={Submitted to The Visual Computer},
+  year={2026}
+}
+```
+(The citation will be updated once the paper is officially published.)
