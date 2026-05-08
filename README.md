@@ -5,7 +5,7 @@
 
 > **🚨 Official Statement:** > This code is directly related to the manuscript currently submitted to **The Visual Computer (TVC)**. If you find our code, pre-trained models, or methodology helpful in your research, we highly encourage you to cite our relevant manuscript.
 
-## 📌 Checkpoints Availability (Defensive Open-Source)
+## 📌 Checkpoints Availability 
 To ensure the reproducibility of our core claims, this repository currently provides the **inference code** and the **pre-trained weights for noise level $\sigma=15$**, which directly corresponds to the main performance comparison (Figure 1 in the paper) evaluated on the structure-heavy **Urban100 dataset**. 
 
 The full suite of pre-trained models for all noise levels (e.g., $\sigma=25, 50$) and the complete training pipeline (including customized data augmentation and loss functions) will be officially released upon the acceptance of the manuscript.
