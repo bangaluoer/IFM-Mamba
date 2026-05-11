@@ -88,6 +88,6 @@ If you find this work useful, please consider citing:
 }
 ```
 (The citation will be updated once the paper is officially published.)
-##　📬 Contact
+## 📬 Contact
 
 For questions about the code or models, please contact the authors through the GitHub issue page.
